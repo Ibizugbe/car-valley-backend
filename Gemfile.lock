@@ -71,7 +71,6 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-    bcrypt (3.1.18)
     bootsnap (1.14.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -167,10 +166,9 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.13)
-  bcrypt (~> 3.1.7)
   bootsnap
   debug
-  jwt (~> 2.5)
+  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rack-cors (~> 1.1)
