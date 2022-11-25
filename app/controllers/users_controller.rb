@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def login
     @user = User.find_by(username: user_params[:username])
 
-    if @user && @user.authenticate(user_params[:password])
+    if @user&.authenticate(user_params[:password])
       token = encode_token({ user_id: @user.id })
       render json: { user: @user, token: }, status: :ok
     else
