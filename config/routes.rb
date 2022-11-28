@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :users, only: [:index, :show, :create]
   resources :cars, only: [:index, :show]
+  resources :users do
+    resources :reservations, only: [:create, :show, :delete]
+  end
+
   post "users/login", to: "users#login"
 end

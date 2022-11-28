@@ -12,7 +12,7 @@ class CarsController < ApplicationController
   # GET /cars/1
   def show
     if @car
-      render json: @car
+      render json: { data: @car, status: 'success' }
     else
       render json: { error: 'Car not found', status: 'failure' }, status: :unprocessable_entity
     end
@@ -20,19 +20,12 @@ class CarsController < ApplicationController
 
   # POST /cars
   def create
-    existing_car = Car.find_by(topic: car_params[:topic], user_id: car_params[:user_id],
-                               technology_id: car_params[:technology_id])
-    existing_join = Profession.find_by(user_id: car_params[:user_id], technology_id: car_params[:technology_id])
+    @car = Car.create(car_params)
 
-    Profession.create(user_id: car_params[:user_id], technology_id: car_params[:technology_id]) unless existing_join
-
-    if existing_car
-      render json: { error: 'Duplicate Topic for the specific Technology by a specific User', status: 'failure' },
-             status: :unprocessable_entity
+    if @car
+      render json: { data: @car, status: 'success' }, status: :created
     else
-      car = Car.new(car_params)
-      car.save
-      render json: { data: car, status: 'success' }, status: :created
+      render json: { error: @car.errors, status: 'failure' }, status: :unprocessable_entity
     end
   end
 
