@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create(username: "admin", password_digest: "password", first_name: "John", last_name: "doe", dob: "2000-03-23" )
-User.create(username: "Rex", password_digest: "password", first_name: "Rex", last_name: "Silver", dob: "2010-03-23")
-User.create(username: "Abraham", password_digest: "password", first_name: "Abraham", last_name: "Smith", dob: "2003-06-20")
+User.create(username: "admin", password: "password12345", first_name: "John", last_name: "doe", dob: "2000-03-23" )
+User.create(username: "Rex", password: "password12345", first_name: "Rex", last_name: "Silver", dob: "2010-03-23")
+User.create(username: "Abraham", password: "password12345", first_name: "Abraham", last_name: "Smith", dob: "2003-06-20")
 
 Car.create(model: "Ford", color: "Red", price: 300, description: "made in Japan, on the 13th of october 2022, has a maximum speed of 233km/h", release_date: "2022-03-23" )
 Car.create(model: "Honda", color: "Gray", price: 100, description: "made in China, on the 13th of october 2022, has a maximum speed of 233km/h", release_date: "2022-03-23")
