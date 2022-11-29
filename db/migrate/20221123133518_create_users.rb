@@ -7,7 +7,6 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :last_name, null: false
       t.date :dob, null: false
 
-
       t.timestamps
     end
   end

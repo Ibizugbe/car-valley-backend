@@ -3,10 +3,10 @@ class CreateCars < ActiveRecord::Migration[7.0]
     create_table :cars do |t|
       t.string :model,     null: false, unique: true, index: true
       t.string :color,     null: false
+      t.string :image,     null: false
       t.integer :price,    null: false
       t.text :description, null: false
       t.date :release_date, null: false
-      
 
       t.timestamps
     end

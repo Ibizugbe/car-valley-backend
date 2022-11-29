@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_23_133856) do
   create_table "cars", force: :cascade do |t|
     t.string "model", null: false
     t.string "color", null: false
+    t.string "image", null: false
     t.integer "price", null: false
     t.text "description", null: false
     t.date "release_date", null: false
