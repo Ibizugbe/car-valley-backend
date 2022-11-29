@@ -80,7 +80,7 @@ you@your-Pc-name:~$ cd <final-capstone-backend>
 #### 2. Install the gems:
 
 ```
-npm install
+bundle install
 ```
 
 #### 3. Start the server:
