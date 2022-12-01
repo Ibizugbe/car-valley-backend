@@ -2,6 +2,13 @@ class ReservationsController < ApplicationController
   before_action :authorize
   before_action :set_reservation, only: %i[show update destroy]
 
+    # GET /users/:user_id/reservations
+    def index
+      @reservations = Reservation.all
+  
+      render json: @reservations, include: :user, include: :car
+    end
+
   # POST /users/:user_id/reservations
   def create
     @reservation = Reservation.create(reservation_params)
@@ -44,6 +51,6 @@ class ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.permit(:car_id, :date, :city).merge(user_id: params[:user_id])
+    params.require(:reservation).permit(:car_id, :date, :city).merge(user_id: params[:user_id])
   end
 end
