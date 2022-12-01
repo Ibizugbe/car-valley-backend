@@ -6,7 +6,7 @@ class ReservationsController < ApplicationController
   def index
     @reservations = Reservation.all
 
-    render json: @reservations, include: :user, include: :car
+    render json: @reservations, include: :car
   end
 
   # POST /users/:user_id/reservations
