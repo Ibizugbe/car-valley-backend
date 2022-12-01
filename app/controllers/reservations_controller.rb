@@ -2,12 +2,12 @@ class ReservationsController < ApplicationController
   before_action :authorize
   before_action :set_reservation, only: %i[show update destroy]
 
-    # GET /users/:user_id/reservations
-    def index
-      @reservations = Reservation.all
-  
-      render json: @reservations, include: :user, include: :car
-    end
+  # GET /users/:user_id/reservations
+  def index
+    @reservations = Reservation.all
+
+    render json: @reservations, include: :user, include: :car
+  end
 
   # POST /users/:user_id/reservations
   def create
