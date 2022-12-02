@@ -6,9 +6,9 @@ class UsersController < ApplicationController
 
     if user.valid?
       token = encode_token({ user_id: user.id })
-      render json: { user: user, status: "success" }, status: :ok
+      render json: { user:, status: 'success' }, status: :ok
     else
-      render json: { error: user.errors.full_messages, status: "failure" }, status: :unprocessable_entity
+      render json: { error: user.errors.full_messages, status: 'failure' }, status: :unprocessable_entity
     end
   end
 
