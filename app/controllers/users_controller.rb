@@ -2,13 +2,13 @@ class UsersController < ApplicationController
   before_action :authorize, except: %i[create login]
 
   def create
-    @user = User.create(user_params)
+    user = User.create(user_params)
 
-    if @user.valid?
-      token = encode_token({ user_id: @user.id })
-      render json: { user: @user, token: }, status: :ok
+    if user.valid?
+      token = encode_token({ user_id: user.id })
+      render json: { user: user, status: "success" }, status: :ok
     else
-      render json: { error: 'invalid username or password' }, status: :unprocessable_entity
+      render json: { error: user.errors.full_messages, status: "failure" }, status: :unprocessable_entity
     end
   end
 
@@ -35,6 +35,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:username, :password)
+    params.permit(:username, :first_name, :last_name, :dob, :password)
   end
 end
