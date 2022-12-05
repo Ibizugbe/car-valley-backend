@@ -51,6 +51,8 @@ class CarsController < ApplicationController
     end
   end
 
+  # private functions
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
