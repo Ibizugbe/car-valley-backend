@@ -16,8 +16,8 @@ class UsersController < ApplicationController
     user = User.find_by(username: params[:username])
     if user
       if user.authenticate(params[:password])
-        toke = encode_token({ user_id: user.id })
-        render json: { user:, token: toke, status: 'success' }, status: 200,
+        token = encode_token({ user_id: user.id })
+        render json: { user:, token:, status: 'success' }, status: 200,
                except: %i[password_digest created_at updated_at]
       else
         render json: { error: 'Invalid Password', status: 'failure' }, status: :unauthorized
