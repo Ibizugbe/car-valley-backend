@@ -4,7 +4,7 @@ class ReservationsController < ApplicationController
 
   # GET /users/:user_id/reservations
   def index
-    @reservations = Reservation.all
+    @reservations = Reservation.where(user_id: params[:user_id])
 
     render json: @reservations, include: :car
   end
