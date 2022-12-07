@@ -141,10 +141,14 @@ rails server
 To run tests, run the following command:
 
 
-Example command:
+Example commands:
 
 ```sh
   bin/rails rspec spec
+```
+
+```sh
+  rake rswag
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
