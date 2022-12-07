@@ -20,12 +20,12 @@ class CarsController < ApplicationController
 
   # POST /cars
   def create
-    @car = Car.create(car_params)
+    car = Car.new(car_params)
 
-    if @car
-      render json: { data: @car, status: 'success' }, status: :created
+    if car.save
+      render json: { data: car, status: 'success' }, status: :created
     else
-      render json: { error: @car.errors, status: 'failure' }, status: :unprocessable_entity
+      render json: { error: car.errors, status: 'failure' }, status: :unprocessable_entity
     end
   end
 
