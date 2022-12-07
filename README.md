@@ -1,18 +1,25 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Final capstone backend\] ](#-about-project-)
+- [📖 \[Final capstone\] ](#-final-capstone-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
       - [1. Navigate to the location of the folder in your machine:](#1-navigate-to-the-location-of-the-folder-in-your-machine)
       - [2. Install the gems:](#2-install-the-gems)
-      - [3. Start the server:](#3-start-the-server)
+      - [3. Set up the database with your credentials:](#3-set-up-the-database-with-your-credentials)
+      - [4. Create the databases:](#4-create-the-databases)
+      - [5. Migrate the databases:](#5-migrate-the-databases)
+      - [6. Seed the dummy data: (Necessary for Admin)](#6-seed-the-dummy-data-necessary-for-admin)
+      - [6. Install NPM packages:](#6-install-npm-packages)
+      - [7. Build and Watch Tailwindcss:](#7-build-and-watch-tailwindcss)
+    - [Usage](#usage)
+      - [7. Run the server:](#7-run-the-server)
+    - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -66,7 +73,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Ibizugbe/final-capstone-backend.git
+  git clone https://github.com/rex-9/WebArena.git
 ```
 
 ### Install
@@ -74,7 +81,7 @@ Clone this repository to your desired folder:
 #### 1. Navigate to the location of the folder in your machine:
 
 ```
-you@your-Pc-name:~$ cd <final-capstone-backend>
+you@your-Pc-name:~$ cd <WebArena>
 ```
 
 #### 2. Install the gems:
@@ -83,11 +90,61 @@ you@your-Pc-name:~$ cd <final-capstone-backend>
 bundle install
 ```
 
-#### 3. Start the server:
+#### 3. Set up the database with your credentials:
 
 - setup the database environment in
 ```
-rails s
+config/database.yml
+```
+
+#### 4. Create the databases:
+
+```
+rails db:create
+```
+
+#### 5. Migrate the databases:
+
+```
+rails db:migrate
+```
+
+#### 6. Seed the dummy data: (Necessary for Admin)
+
+```
+rails db:seed
+```
+
+#### 6. Install NPM packages:
+
+```
+npm i
+```
+
+#### 7. Build and Watch Tailwindcss:
+
+```
+rails tailwindcss:watch
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+#### 7. Run the server:
+
+```
+rails server
+```
+### Run tests
+
+To run tests, run the following command:
+
+
+Example command:
+
+```sh
+  bin/rails rspec spec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
