@@ -1,0 +1,170 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/cars":
+    post:
+      summary: Create a Car
+      tags:
+      - Cars
+      parameters: []
+      responses:
+        '201':
+          description: car has been created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                model:
+                  type: string
+                color:
+                  type: string
+                image:
+                  type: string
+                price:
+                  type: integer
+                description:
+                  type: text
+                release_date:
+                  type: date
+              required:
+              - model
+              - color
+              - image
+              - price
+              - description
+              - release_date
+  "/api/reservations":
+    post:
+      summary: Create a reservation
+      tags:
+      - Reservations
+      parameters: []
+      responses:
+        '201':
+          description: car has been created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: bigint
+                car_id:
+                  type: bigint
+                date:
+                  type: date
+                city:
+                  type: string
+              required:
+              - user_id
+              - car_id
+              - date
+              - city
+  "/api/users":
+    post:
+      summary: Create a user
+      tags:
+      - Users
+      parameters: []
+      responses:
+        '201':
+          description: user has been created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+                first_name:
+                  type: string
+                last_name:
+                  type: string
+                dob:
+                  type: date
+              required:
+              - username
+              - password
+              - first_name
+              - last_name
+              - dob
+  "/api//users/{id}":
+    get:
+      summary: Retrieves a user
+      tags:
+      - Users
+      - Another Tag
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: user found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: integer
+                  password:
+                    type: string
+                  first_name:
+                    type: string
+                  last_name:
+                    type: string
+                  dob:
+                    type: date
+                required:
+                - username
+                - password
+                - first_name
+                - last_name
+                - dob
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: integer
+                  password:
+                    type: string
+                  first_name:
+                    type: string
+                  last_name:
+                    type: string
+                  dob:
+                    type: date
+                required:
+                - username
+                - password
+                - first_name
+                - last_name
+                - dob
+        '404':
+          description: user not found
+        '406':
+          description: unsupported accept header
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
