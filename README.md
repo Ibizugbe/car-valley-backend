@@ -20,6 +20,7 @@
     - [Usage](#usage)
       - [7. Run the server:](#7-run-the-server)
     - [Run tests](#run-tests)
+  - [Kanban Board ](#-kanban-)
   - [👥 Authors ](#-authors-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -58,6 +59,9 @@
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
+
+Attached [here](https://github.com/ChrispaixK/car-valley-front-end
+) is the link to the frontend of the project, follow the instructions in the readme to get it up and running.
 
 ### Prerequisites
 
@@ -152,6 +156,13 @@ Example commands:
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Kanban Board <a name="kanban"></a>
+
+- Attached here is a [link](https://github.com/users/Ibizugbe/projects/2
+) to the project kanban board
+- This [link](https://github.com/microverseinc/curriculum-final-capstone/blob/main/projects/prepare_for_presentation.mdhttps://github.com/microverseinc/curriculum-final-capstone/blob/main/projects/prepare_for_presentation.md) contains the issue with the screenshot of the initial state of the kanban board.
+- This team consists of a total number of four (4) people.
 
 ## 👥 Authors <a name="authors"></a>
 
