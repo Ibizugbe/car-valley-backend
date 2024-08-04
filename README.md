@@ -30,7 +30,7 @@
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-# 📖 [Final capstone] <a name="about-project"></a>
+# 📖 Car Valley App <a name="about-project"></a>
 
 
 ## 🛠 Built With <a name="built-with"></a>
