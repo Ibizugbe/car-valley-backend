@@ -62,8 +62,7 @@
 
 To get a local copy up and running, follow these steps.
 
-Attached [here](https://github.com/ChrispaixK/car-valley-front-end
-) is the link to the frontend of the project, follow the instructions in the readme to get it up and running.
+Attached [here](https://github.com/Ibizugbe/car-valley-front-end) is the link to the frontend of the project, follow the instructions in the readme to get it up and running.
 
 ### Prerequisites
 
